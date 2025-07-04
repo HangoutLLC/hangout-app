@@ -1,6 +1,7 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 type GroupCardProps = {
+  id: number;
   name: string;
   description: string;
   onPress?: () => void;

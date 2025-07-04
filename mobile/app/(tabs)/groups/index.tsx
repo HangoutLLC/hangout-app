@@ -1,5 +1,6 @@
 import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
+import { useRouter } from 'expo-router';
 
 import { Collapsible } from '@/components/Collapsible';
 import { ExternalLink } from '@/components/ExternalLink';
@@ -9,14 +10,15 @@ import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import GroupCard from '@/components/GroupCard';
 
-
-const groups = [
-  { id: 1, name: 'Hangout App Group', description: 'Discuss app progress and ideas' },
-  { id: 2, name: 'Pals', description: 'The BEST friend group' },
-  { id: 3, name: 'MAT 108', description: 'Plan study sessions' },
-];
-
 export default function TabTwoScreen() {
+  const router = useRouter();
+
+  const groups = [
+    { id: 1, name: 'Hangout App Group', description: 'Discuss app progress and ideas' },
+    { id: 2, name: 'Pals', description: 'The BEST friend group' },
+    { id: 3, name: 'MAT 108', description: 'Plan study sessions' },
+  ];
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
@@ -38,9 +40,15 @@ export default function TabTwoScreen() {
         {groups.map((group) => (
           <GroupCard
             key={group.id}
+            id={group.id}
             name={group.name}
             description={group.description}
-            onPress={() => console.log(`Clicked ${group.name}`)}
+            onPress={() =>
+              router.push({
+                pathname: '/groups/[id]',
+                params: { id: group.id.toString() },
+              })
+            }
           />
         ))}
       </ThemedView>
