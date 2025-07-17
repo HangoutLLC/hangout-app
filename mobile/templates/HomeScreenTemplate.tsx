@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import Colors from '../constants/Colors';
-import Sizes from '../constants/Sizes';
+import { Colors } from '@/constants/Colors';
+import  Sizes from '@/constants/Sizes';
 
 // mock data
 const mockData = [
