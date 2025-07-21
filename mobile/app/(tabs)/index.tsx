@@ -5,6 +5,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { UpcomingEventWidget } from '@/components/UpcomingEvents';
 
 export default function HomeScreen() {
   return (
@@ -28,6 +29,13 @@ export default function HomeScreen() {
       <ThemedView> 
         <ThemedText> Component 4 </ThemedText>
       </ThemedView>
+      <UpcomingEventWidget
+        eventName="Sample Event"
+        eventDate={new Date()}
+        eventLocation="Online"
+        eventDescription="This is a sample event description."
+        eventGroup="Sample Group"
+      ></UpcomingEventWidget>
     </ParallaxScrollView>
   );
 }
