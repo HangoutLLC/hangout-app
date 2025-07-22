@@ -17,16 +17,16 @@ export default function FeatureTemplate() {
   );
 }
 
-// 📄 Styles
+// Styles
 const styles = StyleSheet.create({
   container: {
     padding: Sizes.spacing.md,
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.light.background,
   },
   heading: {
     fontSize: Sizes.font.large,
     fontWeight: 'bold',
     marginBottom: Sizes.spacing.sm,
-    color: Colors.text,
+    color: Colors.light.text,
   },
 });

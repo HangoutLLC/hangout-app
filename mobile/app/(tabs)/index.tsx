@@ -5,6 +5,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import PersonalInsights from '@/components/personal-insights/PersonalInsights'
 
 export default function HomeScreen() {
   return (
@@ -16,6 +17,7 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+      <PersonalInsights />
       <ThemedView> 
         <ThemedText> Component 1 </ThemedText>
       </ThemedView>
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 220,
-    width: 220,
+    width: 20,
     bottom: 0,
     left: 0,
     position: 'absolute',
