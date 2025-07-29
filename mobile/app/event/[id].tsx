@@ -3,6 +3,8 @@ import { Platform, StyleSheet, ScrollView } from "react-native";
 
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
+import { useColorScheme } from "@/hooks/useColorScheme.web";
+
 
 export default function EventDetailPage() {
   const params = useLocalSearchParams<{
@@ -12,6 +14,8 @@ export default function EventDetailPage() {
     eventLocation?: string;
     eventDate?: string;
   }>();
+
+  const colorScheme = useColorScheme();
 
   // Parse the date if it exists
   const eventDate = params.eventDate ? new Date(params.eventDate) : null;

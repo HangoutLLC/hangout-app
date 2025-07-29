@@ -19,16 +19,16 @@ export default function HomeScreen() {
       }
     >
       <ThemedView>
-        <ThemedText> Component 1 </ThemedText>
+        <ThemedText variant="onBackground"> Component 1 </ThemedText>
       </ThemedView>
       <ThemedView>
-        <ThemedText> Component 2 </ThemedText>
+        <ThemedText variant="onBackground"> Component 2 </ThemedText>
       </ThemedView>
       <ThemedView>
-        <ThemedText> Component 3 </ThemedText>
+        <ThemedText variant="onBackground"> Component 3 </ThemedText>
       </ThemedView>
       <ThemedView>
-        <ThemedText> Component 4 </ThemedText>
+        <ThemedText variant="onBackground"> Component 4 </ThemedText>
       </ThemedView>
       <UpcomingEvents
         events={[
