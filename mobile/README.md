@@ -1,71 +1,50 @@
-# Hangout App
+# Welcome to your Expo app 👋
 
-A modern React Native mobile application built with Expo for organizing and managing social events and hangouts.
+This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## 🛠️ Installation / Getting Started
+## Get started
 
-### Prerequisites
+1. Install dependencies
 
-- Node.js (v18 or later)
-- npm or yarn
-- iOS Simulator (for iOS development) or Android Studio (for Android development)
+   ```bash
+   npm install
+   ```
 
-### Clone the Repository
+2. Start the app
+
+   ```bash
+   npx expo start
+   ```
+
+In the output, you'll find options to open the app in a
+
+- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
+- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+
+You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+
+## Get a fresh project
+
+When you're ready, run:
 
 ```bash
-git clone https://github.com/hangoutllc/hangout-app.git
-cd hangout-app
+npm run reset-project
 ```
 
-### Install Dependencies
+This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-Begin by downloading dependencies for Node.js.
+## Learn more
 
-```bash
-cd mobile
-npm install
-```
+To learn more about developing your project with Expo, look at the following resources:
 
-### Start Development Server
+- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
+- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
 
-To start the Expo development server, run
+## Join the community
 
-```bash
-npx expo start
-```
+Join our community of developers creating universal apps.
 
-This will open a webpage hosted on https://localhost:8081 by default.
-
-## Features
-
-The goal of this app is to allow groups to coordinate and review events using the following features:
-
-- Event scheduling
-- Event reviewing
-- User data analysis
-
-## Development Status
-
-This project is currently in active development. Current focus areas:
-
-- Event management functionality
-- User authentication
-- Backend API integration
-- Data warehousing
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## Contact
-
-- **Repository**: [https://github.com/hangoutllc/hangout-app](https://github.com/hangoutllc/hangout-app)
-- **Organization**: Hangout LLC
-
-## License
-
-This project will eventually be licensed under some license, likely MIT license.
+- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
+- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
