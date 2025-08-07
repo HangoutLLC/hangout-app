@@ -1,49 +1,52 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet, ScrollView, View } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
-import HomescreenHeader from '@/components/HomescreenHeader';
 import { HelloWave } from '@/components/HelloWave';
+import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-    <View /*style={styles.titleContainer}*/>
-      <HomescreenHeader />
-      <ScrollView
-        /*style={styles.scrollView}*/
-      >
-        <ThemedView> 
-          <ThemedText> Component 1 </ThemedText>
-        </ThemedView>
-        <ThemedView> 
-          <ThemedText> Component 2 </ThemedText>
-        </ThemedView>
-        <ThemedView> 
-          <ThemedText> Component 3 </ThemedText>
-        </ThemedView>
-        <ThemedView> 
-          <ThemedText> Component 4 </ThemedText>
-        </ThemedView>
-      </ScrollView>
-    </View>
+    <ParallaxScrollView
+      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
+      headerImage={
+        <Image
+          source={require('@/assets/images/idiots.gif')}
+          style={styles.reactLogo}
+        />
+      }>
+      <ThemedView> 
+        <ThemedText> Component 1 </ThemedText>
+      </ThemedView>
+      <ThemedView> 
+        <ThemedText> Component 2 </ThemedText>
+      </ThemedView>
+      <ThemedView> 
+        <ThemedText> Component 3 </ThemedText>
+      </ThemedView>
+      <ThemedView> 
+        <ThemedText> Component 4 </ThemedText>
+      </ThemedView>
+    </ParallaxScrollView>
   );
 }
 
-// const styles = StyleSheet.create({
-//   titleContainer: {
-//     flex: 1,
-//     alignItems: 'center',
-//     gap: 8,
-//     paddingHorizontal: 16,
-//     paddingTop: 24,
-//     backgroundColor: '#F5F5F5',
-//   },
-//   scrollView: {
-//     flex: 1,
-//     backgroundColor: '#E3F2FD',
-//     borderRadius: 12,
-//     padding: 12,
-//     marginTop: 8,
-//   },
-// });
+const styles = StyleSheet.create({
+  titleContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  stepContainer: {
+    gap: 8,
+    marginBottom: 8,
+  },
+  reactLogo: {
+    height: 220,
+    width: 220,
+    bottom: 0,
+    left: 0,
+    position: 'absolute',
+  },
+});
