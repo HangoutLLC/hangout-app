@@ -2,7 +2,7 @@ export interface InsightMessage {
     primaryLabel: string;
     secondaryLabel?: string;
 }
-  
+
 export const InsightMessages: Record<string, InsightMessage> = {
   attended: {
     primaryLabel: 'Events Attended',
