@@ -5,6 +5,7 @@ import HomescreenHeader from '@/components/HomescreenHeader';
 import { HelloWave } from '@/components/HelloWave';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import PersonalInsights from '@/components/personal-insights/PersonalInsights'
 
 export default function HomeScreen() {
   return (
