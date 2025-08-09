@@ -47,17 +47,17 @@ function UpcomingEventWidget({ event }: UpcomingEventWidgetProps) {
       }
     >
       <ThemedView variant="primaryContainer" style={styles.container}>
-        <ThemedText variant="onPrimary" style={styles.title}>
+        <ThemedText variant="onPrimaryContainer" style={styles.title}>
           {event.eventName || "No event scheduled"}
         </ThemedText>
-        <ThemedText variant="onPrimary" style={styles.defaultText}>
+        <ThemedText variant="onPrimaryContainer" style={styles.defaultText}>
           {event.eventGroup || "No group assigned"}
         </ThemedText>
-        <ThemedText variant="onPrimary" style={styles.defaultText}>
+        <ThemedText variant="onPrimaryContainer" style={styles.defaultText}>
           {event.eventLocation || "Unknown"}
         </ThemedText>
         <ThemedView variant="primaryContainer" style={styles.dateTimeRow}>
-          <ThemedText variant="onPrimary" style={styles.defaultText}>
+          <ThemedText variant="onPrimaryContainer" style={styles.defaultText}>
             {dateStr}
           </ThemedText>
           {timeStr && (
