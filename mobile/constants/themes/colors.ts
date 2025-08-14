@@ -104,4 +104,4 @@ export const darkTheme = {
   surfaceContainerHighest: '#37343a',
 };
 
-// export type ThemeColors = typeof lightTheme;
+export type ThemeColors = typeof lightTheme;
