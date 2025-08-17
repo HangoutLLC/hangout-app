@@ -6,6 +6,7 @@ import { HelloWave } from '@/components/HelloWave';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import PersonalInsights from '@/components/personal-insights/PersonalInsights'
+import { Button } from '@/components/reusable/button/Button';
 
 export default function HomeScreen() {
   return (
@@ -14,6 +15,9 @@ export default function HomeScreen() {
       <ScrollView
         /*style={styles.scrollView}*/
       >
+        <Button onPress={() => console.log('Button Pressed!')} size='lg' variant='tonal' tone='tertiary'>
+          Press Me
+        </Button>
         <ThemedView> 
           <ThemedText> Component 1 </ThemedText>
         </ThemedView>
