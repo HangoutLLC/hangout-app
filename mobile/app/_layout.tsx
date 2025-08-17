@@ -6,6 +6,12 @@ import 'react-native-reanimated';
 import { ThemeProvider as RNEThemeProvider } from '@rneui/themed';
 import { buildAppTheme } from '@/constants/themes';
 import { useColorScheme } from '@/hooks/useColorScheme';
+import {
+  LibertinusSerif_400Regular,
+  LibertinusSerif_600SemiBold,
+  LibertinusSerif_700Bold,
+} from '@expo-google-fonts/libertinus-serif';
+
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -13,8 +19,11 @@ export default function RootLayout() {
   const appTheme = buildAppTheme(mode);
   const navTheme = colorScheme === 'dark' ? DarkTheme : DefaultTheme;
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+    // SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    LibertinusSerif_400Regular,
+    LibertinusSerif_600SemiBold,
+    LibertinusSerif_700Bold,
+  })
 
   if (!loaded) {
     // Async font loading only occurs in development.
