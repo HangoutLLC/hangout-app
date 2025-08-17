@@ -1,6 +1,6 @@
 // HangText.tsx
 import React from 'react';
-import { Text, type TextProps, StyleProp, type TextStyle } from 'react-native';
+import { Text, type TextProps, type TextStyle } from 'react-native';
 import { useTheme } from '@rneui/themed';
 
 // define HangText types
@@ -65,6 +65,12 @@ export function HangText({
   const sizeWeightKey = variant ? VARIANT[variant] : undefined;
   const derSize: Size = size ?? sizeWeightKey?.size ?? 'md';
   const derWeight: Weight = weight ?? sizeWeightKey?.weight ?? 'regular';
+
+   // define font family
+  const family = 
+    theme.typography?.family[derWeight] ??
+    theme.typography?.family.regular ??
+    undefined;
   
   const s = SIZE[derSize];
   const numberOfLines =
@@ -83,6 +89,7 @@ export function HangText({
           fontSize: s.fontSize,
           lineHeight: s.lineHeight,
           fontWeight: WEIGHT[derWeight],
+          fontFamily: family,
         }, 
         style,
       ]}
