@@ -7,6 +7,7 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import PersonalInsights from '@/components/personal-insights/PersonalInsights'
 import { Button } from '@/components/reusable/button/Button';
+import { HangText } from '@/components/reusable/text/HangText';
 
 export default function HomeScreen() {
   return (
@@ -19,10 +20,10 @@ export default function HomeScreen() {
           Press Me
         </Button>
         <ThemedView> 
-          <ThemedText> Component 1 </ThemedText>
+          <HangText> normal test with a <HangText link onPress={() => {}}>link</HangText> embed </HangText>
         </ThemedView>
         <ThemedView> 
-          <ThemedText> Component 2 </ThemedText>
+          <HangText variant='body'> Test Sizing </HangText>
         </ThemedView>
         <ThemedView> 
           <ThemedText> Component 3 </ThemedText>
