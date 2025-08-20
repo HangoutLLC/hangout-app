@@ -1,29 +1,30 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet, ScrollView, View } from 'react-native';
+import { Image } from "expo-image";
+import { Platform, StyleSheet, ScrollView, View } from "react-native";
 
-import HomescreenHeader from '@/components/HomescreenHeader';
-import { HelloWave } from '@/components/HelloWave';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import PersonalInsights from '@/components/personal-insights/PersonalInsights'
+import HomescreenHeader from "@/components/HomescreenHeader";
+import { HelloWave } from "@/components/HelloWave";
+import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
+import PersonalInsights from "@/components/personal-insights/PersonalInsights";
+import "@/components/Auth";
 
 export default function HomeScreen() {
   return (
     <View /*style={styles.titleContainer}*/>
       <HomescreenHeader />
       <ScrollView
-        /*style={styles.scrollView}*/
+      /*style={styles.scrollView}*/
       >
-        <ThemedView> 
+        <ThemedView>
           <ThemedText> Component 1 </ThemedText>
         </ThemedView>
-        <ThemedView> 
+        <ThemedView>
           <ThemedText> Component 2 </ThemedText>
         </ThemedView>
-        <ThemedView> 
+        <ThemedView>
           <ThemedText> Component 3 </ThemedText>
         </ThemedView>
-        <ThemedView> 
+        <ThemedView>
           <ThemedText> Component 4 </ThemedText>
         </ThemedView>
       </ScrollView>
@@ -48,4 +49,3 @@ export default function HomeScreen() {
 //     marginTop: 8,
 //   },
 // });
-
