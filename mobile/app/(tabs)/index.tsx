@@ -2,11 +2,12 @@ import { Image } from 'expo-image';
 import { Platform, StyleSheet, ScrollView, View} from 'react-native';
 import React from 'react';
 
-import HomescreenHeader from '@/components/HomescreenHeader';
-import { HelloWave } from '@/components/HelloWave';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import PersonalInsights from '@/components/personal-insights/PersonalInsights'
+import HomescreenHeader from "@/components/HomescreenHeader";
+import { HelloWave } from "@/components/HelloWave";
+import { ThemedText } from "@/components/ThemedText";
+import { ThemedView } from "@/components/ThemedView";
+import PersonalInsights from "@/components/personal-insights/PersonalInsights";
+import "@/components/Auth";
 import { Button } from '@/components/reusable/button/Button';
 import { HangText } from '@/components/reusable/text/HangText';
 
@@ -19,19 +20,19 @@ export default function HomeScreen() {
     <View /*style={styles.titleContainer}*/>
       <HomescreenHeader />
       <ScrollView
-        /*style={styles.scrollView}*/
+      /*style={styles.scrollView}*/
       >
-        <Button onPress={() => console.log('Button Pressed!')} size='lg' variant='solid' tone='primary'>
-          Press Me
-        </Button>
-        <ThemedView> 
-          <HangText> normal test with a <HangText link onPress={() => {}}>link</HangText> embed </HangText>
+        <ThemedView>
+          <ThemedText> Component 1 </ThemedText>
         </ThemedView>
-        <ThemedView> 
-          <HangText variant='body'> Test Sizing </HangText>
+        <ThemedView>
+          <ThemedText> Component 2 </ThemedText>
         </ThemedView>
-        <ThemedView> 
+        <ThemedView>
           <ThemedText> Component 3 </ThemedText>
+        </ThemedView>
+        <ThemedView>
+          <ThemedText> Component 4 </ThemedText>
         </ThemedView>
       </ScrollView>
     </View>
@@ -55,4 +56,3 @@ export default function HomeScreen() {
 //     marginTop: 8,
 //   },
 // });
-
