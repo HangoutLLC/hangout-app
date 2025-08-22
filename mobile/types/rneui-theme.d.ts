@@ -18,7 +18,7 @@ declare module '@rneui/themed' {
     };
   }
 
-  // allow passing typography into createTheme
+  // allow passing typography and tokens into createTheme
   interface CreateThemeOptions {
     typography?: {
       family: {
@@ -26,16 +26,42 @@ declare module '@rneui/themed' {
         medium?: string;
         bold?: string;
       };
-    };  
+    };
+    tokens?: {
+      iconSizes?: Partial<{ sm: number; md: number; lg: number }>;
+      minTouchTarget?: number;
+      listItem: {
+        height:      { sm: number; md: number; lg: number };
+        paddingH:    { sm: number; md: number; lg: number };
+        paddingV:    { sm: number; md: number; lg: number };
+        gap:         number;
+        titleSize:   { sm: number; md: number; lg: number };
+        subtitleSize:{ sm: number; md: number; lg: number };
+        radius:      number;
+      };
+    };
   }
 
-  // make typography visible to Theme
+  // make typography and token sizes visible to Theme
   interface Theme {
     typography?: {
       family: {
         regular?: string;
         medium?: string;
         bold?: string;
+      };
+    };
+    tokens: {
+      iconSizes: { sm: number; md: number; lg: number };
+      minTouchTarget: number;
+      listItem: {
+        height:      { sm: number; md: number; lg: number };
+        paddingH:    { sm: number; md: number; lg: number };
+        paddingV:    { sm: number; md: number; lg: number };
+        gap:         number;
+        titleSize:   { sm: number; md: number; lg: number };
+        subtitleSize:{ sm: number; md: number; lg: number };
+        radius:      number;
       };
     };
   }

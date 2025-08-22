@@ -28,5 +28,18 @@ export function buildAppTheme(mode: 'light' | 'dark') {
         },
     },
     typography,
+    tokens: {
+      iconSizes: { sm: 16, md: 20, lg: 24 },
+      minTouchTarget: 44,
+      listItem: {
+        height:      { sm: 44, md: 56, lg: 72 },
+        paddingH:    { sm: 12, md: 16, lg: 16 },
+        paddingV:    { sm: 6,  md: 8,  lg: 10 },
+        gap:         12,
+        titleSize:   { sm: 14, md: 16, lg: 16 },
+        subtitleSize:{ sm: 12, md: 13, lg: 13 },
+        radius:      10,
+      },
+    },
   });
 }
