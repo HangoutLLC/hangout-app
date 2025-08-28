@@ -6,29 +6,30 @@ import { HelloWave } from "@/components/HelloWave";
 import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import PersonalInsights from "@/components/personal-insights/PersonalInsights";
-import "@/components/Auth";
+import { Redirect } from "expo-router";
 
 export default function HomeScreen() {
   return (
-    <View /*style={styles.titleContainer}*/>
-      <HomescreenHeader />
-      <ScrollView
-      /*style={styles.scrollView}*/
-      >
-        <ThemedView>
-          <ThemedText> Component 1 </ThemedText>
-        </ThemedView>
-        <ThemedView>
-          <ThemedText> Component 2 </ThemedText>
-        </ThemedView>
-        <ThemedView>
-          <ThemedText> Component 3 </ThemedText>
-        </ThemedView>
-        <ThemedView>
-          <ThemedText> Component 4 </ThemedText>
-        </ThemedView>
-      </ScrollView>
-    </View>
+    <Redirect href={"/login"} />
+    // <View /*style={styles.titleContainer}*/>
+    //   <HomescreenHeader />
+    //   <ScrollView
+    //   /*style={styles.scrollView}*/
+    //   >
+    //     <ThemedView>
+    //       <ThemedText> Component 1 </ThemedText>
+    //     </ThemedView>
+    //     <ThemedView>
+    //       <ThemedText> Component 2 </ThemedText>
+    //     </ThemedView>
+    //     <ThemedView>
+    //       <ThemedText> Component 3 </ThemedText>
+    //     </ThemedView>
+    //     <ThemedView>
+    //       <ThemedText> Component 4 </ThemedText>
+    //     </ThemedView>
+    //   </ScrollView>
+    // </View>
   );
 }
 
