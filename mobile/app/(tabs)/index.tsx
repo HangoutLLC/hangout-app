@@ -7,46 +7,47 @@ import { ThemedText } from "@/components/ThemedText";
 import { ThemedView } from "@/components/ThemedView";
 import PersonalInsights from "@/components/personal-insights/PersonalInsights";
 import { Redirect } from "expo-router";
-
+import { RequireAuth } from "@/components/AuthWrapper";
 export default function HomeScreen() {
   return (
-    <Redirect href={"/login"} />
-    // <View /*style={styles.titleContainer}*/>
-    //   <HomescreenHeader />
-    //   <ScrollView
-    //   /*style={styles.scrollView}*/
-    //   >
-    //     <ThemedView>
-    //       <ThemedText> Component 1 </ThemedText>
-    //     </ThemedView>
-    //     <ThemedView>
-    //       <ThemedText> Component 2 </ThemedText>
-    //     </ThemedView>
-    //     <ThemedView>
-    //       <ThemedText> Component 3 </ThemedText>
-    //     </ThemedView>
-    //     <ThemedView>
-    //       <ThemedText> Component 4 </ThemedText>
-    //     </ThemedView>
-    //   </ScrollView>
-    // </View>
+    <RequireAuth>
+      <View /*style={styles.titleContainer}*/>
+        <HomescreenHeader />
+        <ScrollView
+        /*style={styles.scrollView}*/
+        >
+        <ThemedView>
+          <ThemedText> Component 1 </ThemedText>
+        </ThemedView>
+        <ThemedView>
+          <ThemedText> Component 2 </ThemedText>
+        </ThemedView>
+        <ThemedView>
+          <ThemedText> Component 3 </ThemedText>
+        </ThemedView>
+        <ThemedView>
+          <ThemedText> Component 4 </ThemedText>
+        </ThemedView>
+      </ScrollView>
+    </View>
+    </RequireAuth>
   );
 }
 
-// const styles = StyleSheet.create({
-//   titleContainer: {
-//     flex: 1,
-//     alignItems: 'center',
-//     gap: 8,
-//     paddingHorizontal: 16,
-//     paddingTop: 24,
-//     backgroundColor: '#F5F5F5',
-//   },
-//   scrollView: {
-//     flex: 1,
-//     backgroundColor: '#E3F2FD',
-//     borderRadius: 12,
-//     padding: 12,
-//     marginTop: 8,
-//   },
-// });
+const styles = StyleSheet.create({
+  titleContainer: {
+    flex: 1,
+    alignItems: 'center',
+    gap: 8,
+    paddingHorizontal: 16,
+    paddingTop: 24,
+    backgroundColor: '#F5F5F5',
+  },
+  scrollView: {
+    flex: 1,
+    backgroundColor: '#E3F2FD',
+    borderRadius: 12,
+    padding: 12,
+    marginTop: 8,
+  },
+});
