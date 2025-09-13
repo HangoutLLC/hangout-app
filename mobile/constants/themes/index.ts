@@ -40,6 +40,30 @@ export function buildAppTheme(mode: 'light' | 'dark') {
         subtitleSize:{ sm: 12, md: 13, lg: 13 },
         radius:      10,
       },
+      
+      select: {
+        radius: 10,
+        borderWidth: 1,
+        paddingH: { sm: 12, md: 16, lg: 16 },
+        paddingV: { sm: 6,  md: 8,  lg: 10 },
+        controlHeight: { sm: 36, md: 44, lg: 52 },
+        fontSize: { sm: 14, md: 16, lg: 16 },
+        panelMaxHeight: 300,
+        panelElevationAndroid: 4,
+        zIndexIOS: 1,
+        searchPaddingV: 8,
+        gapAbove: 4,
+        gapBelow: 4,
+        
+
+      },
+
+      page: {
+        gutter: { sm: 8, md: 16, lg: 24 },
+        contentGap: 16,
+        header: { height: { page: 56, modal: 48, home: 72 }, gap: 8 },
+        footer: { height: 64, inset: 16, radius: 0, elevation: 4 },
+      }
     },
   });
 }

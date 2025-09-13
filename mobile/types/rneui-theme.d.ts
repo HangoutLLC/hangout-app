@@ -39,6 +39,29 @@ declare module '@rneui/themed' {
         subtitleSize:{ sm: number; md: number; lg: number };
         radius:      number;
       };
+      
+      select?: {
+        radius: number;
+        borderWidth: number;
+        paddingH: { sm: number; md: number; lg: number };
+        paddingV: { sm: number; md: number; lg: number };
+        controlHeight: { sm: number; md: number; lg: number };
+        fontSize: { sm: number; md: number; lg: number };
+        panelMaxHeight: number;
+        panelElevationAndroid: number;
+        zIndexIOS: number;
+        searchPaddingV: number;
+        gapAbove: number;
+        gapBelow: number;
+
+      };
+
+      page: {
+        gutter: { sm: number; md: number; lg: number };
+        contentGap: number;
+        header: { height: { page: number; modal: number; home: number; }; gap: number; };
+        footer: { height: number; inset: number; radius: number; elevation: number;};
+      }
     };
   }
 
@@ -63,6 +86,29 @@ declare module '@rneui/themed' {
         subtitleSize:{ sm: number; md: number; lg: number };
         radius:      number;
       };
+      
+      select?: {
+        radius: number;
+        borderWidth: number;
+        paddingH: { sm: number; md: number; lg: number };
+        paddingV: { sm: number; md: number; lg: number };
+        controlHeight: { sm: number; md: number; lg: number };
+        fontSize: { sm: number; md: number; lg: number };
+        panelMaxHeight: number;
+        panelElevationAndroid: number;
+        zIndexIOS: number;
+        searchPaddingV: number;
+        gapAbove: number;
+        gapBelow: number;
+
+      };
+
+      page: {
+        gutter: { sm: number; md: number; lg: number };
+        contentGap: number;
+        header: { height: { page: number; modal: number; home: number; }; gap: number; };
+        footer: { height: number; inset: number; radius: number; elevation: number;};
+      }
     };
   }
 }
