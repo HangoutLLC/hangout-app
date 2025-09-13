@@ -39,6 +39,12 @@ declare module '@rneui/themed' {
         subtitleSize:{ sm: number; md: number; lg: number };
         radius:      number;
       };
+      list: {
+        contentPadH: { sm: number; md: number; lg: number };
+        contentPadV: number;
+        separatorIndentLeading: number;
+        separatorThickness: number;
+      };
       
       select?: {
         radius: number;
@@ -85,6 +91,12 @@ declare module '@rneui/themed' {
         titleSize:   { sm: number; md: number; lg: number };
         subtitleSize:{ sm: number; md: number; lg: number };
         radius:      number;
+      };
+      list: {
+        contentPadH: { sm: number; md: number; lg: number };
+        contentPadV: number;
+        separatorIndentLeading: number;
+        separatorThickness: number;
       };
       
       select?: {

@@ -40,6 +40,12 @@ export function buildAppTheme(mode: 'light' | 'dark') {
         subtitleSize:{ sm: 12, md: 13, lg: 13 },
         radius:      10,
       },
+      list: {
+        contentPadH: { sm: 12, md: 16, lg: 20 },
+        contentPadV: 8,
+        separatorIndentLeading: 52,
+        separatorThickness: 1,
+      },
       
       select: {
         radius: 10,

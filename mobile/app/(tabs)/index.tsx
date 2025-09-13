@@ -1,7 +1,6 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet, ScrollView, View } from 'react-native';
+import { Platform, StyleSheet, ScrollView, View} from 'react-native';
 import React from 'react';
-import { Snackbar } from 'react-native-paper';
 
 import HomescreenHeader from '@/components/HomescreenHeader';
 import { HelloWave } from '@/components/HelloWave';
@@ -10,7 +9,7 @@ import { ThemedView } from '@/components/ThemedView';
 import PersonalInsights from '@/components/personal-insights/PersonalInsights'
 import { Button } from '@/components/reusable/button/Button';
 import { HangText } from '@/components/reusable/text/HangText';
-import { Alert } from '@/components/reusable/alert/alert';
+
 
 export default function HomeScreen() {
       const  [visible, setVisible] = React.useState(true);
@@ -32,27 +31,7 @@ export default function HomeScreen() {
           <HangText variant='body'> Test Sizing </HangText>
         </ThemedView>
         <ThemedView> 
-         <View>
-        <Button
-            onPress={onToggleSnackBar}
-            size='md'
-        >
-            {visible ? 'Hide' : 'Show'} Alert 
-        </Button>
-        <Alert
-            visible={visible}
-            onDismiss={onDismissSnackBar}
-            action={{
-                label: 'Dismiss',
-                onPress: onDismissSnackBar,
-            }}
-        >
-                Lmao
-        </Alert>
-       </View>
-        </ThemedView>
-        <ThemedView> 
-          <ThemedText> Component 4 </ThemedText>
+          <ThemedText> Component 3 </ThemedText>
         </ThemedView>
       </ScrollView>
     </View>
