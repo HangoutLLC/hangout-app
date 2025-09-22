@@ -7,10 +7,14 @@ import { useColorScheme } from "@/hooks/useColorScheme.web";
 
 interface Event {
   id: string;
-  eventName?: string;
-  eventDate?: Date;
-  eventLocation?: string;
-  eventGroup?: string;
+  name: string;
+  status: "upcoming" | "ongoing" | "completed";
+  visibility: "public" | "private";
+  created_at: string;
+  start_time?: string;
+  location?: string;
+  creater_id: string;
+  group_id?: string;
 }
 
 interface UpcomingEventWidgetProps {
@@ -18,18 +22,17 @@ interface UpcomingEventWidgetProps {
 }
 
 function UpcomingEventWidget({ event }: UpcomingEventWidgetProps) {
-  const formatDateTime = (date: Date) => {
+  const eventTime: Date | undefined = event.start_time ? new Date(event.start_time) : undefined;
+
+
+  const formatDateTime = (date?: Date) => {
+    if(!date) return { dateStr: "Unknown", timeStr: "" };
     const dateStr = date.toLocaleDateString();
-    const timeStr = date.toLocaleTimeString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-    return { dateStr, timeStr };
+    const timeStr = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    return { dateStr, timeStr};
   };
 
-  const { dateStr, timeStr } = event.eventDate
-    ? formatDateTime(event.eventDate)
-    : { dateStr: "Unknown", timeStr: "" };
+  const { dateStr, timeStr } = formatDateTime(eventTime)
 
   return (
     <Pressable
@@ -38,23 +41,27 @@ function UpcomingEventWidget({ event }: UpcomingEventWidgetProps) {
           pathname: "/event/[id]" as any,
           params: {
             id: event.id,
-            eventName: event.eventName || "",
-            eventGroup: event.eventGroup || "",
-            eventLocation: event.eventLocation || "",
-            eventDate: event.eventDate ? event.eventDate.toISOString() : "",
+            name: event.name || "",
+            group_id: event.group_id || "",
+            location: event.location || "",
+            start_time: event.start_time ? new Date(event.start_time).toISOString() : "",
+            creater_id: event.creater_id || "",
+            status: event.status || "",
+            visibility: event.visibility || "",
+            created_at: event.created_at ? new Date(event.created_at).toISOString() : "",
           },
         })
       }
     >
       <ThemedView variant="primaryContainer" style={styles.container}>
         <ThemedText variant="onPrimaryContainer" style={styles.title}>
-          {event.eventName || "No event scheduled"}
+          {event.name || "No event scheduled"}
         </ThemedText>
         <ThemedText variant="onPrimaryContainer" style={styles.defaultText}>
-          {event.eventGroup || "No group assigned"}
+          {event.group_id || "No group assigned"}
         </ThemedText>
         <ThemedText variant="onPrimaryContainer" style={styles.defaultText}>
-          {event.eventLocation || "Unknown"}
+          {event.location || "Unknown"}
         </ThemedText>
         <ThemedView variant="primaryContainer" style={styles.dateTimeRow}>
           <ThemedText variant="onPrimaryContainer" style={styles.defaultText}>
